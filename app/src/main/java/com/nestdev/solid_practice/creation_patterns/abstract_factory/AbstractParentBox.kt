@@ -16,7 +16,7 @@ abstract class AbstractParentBox {
             childBox.takePlaceInParentBox(this)
             println("ParentBox is $TAG")
         } else {
-            Log.d(TAG, "ParentBox is full!!! Can't add new childBox inside!")
+            Log.d(TAG, "ParentBox is full!! size = $size Can't add new childBox ${childBox.TAG} with size ${childBox.placeSize} inside!")
             throw ArrayIndexOutOfBoundsException()
         }
     }
