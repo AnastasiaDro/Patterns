@@ -2,11 +2,11 @@ package com.nestdev.solid_practice.structure_patterns.adapter
 
 import kotlin.random.Random
 
-class Adapter {
+class Adapter: ClientInterface {
     private val dbProvider = DbDataProvider("My database", 0)
     private val inetDataProvider = InetDataProvider()
 
-    fun getData(): String {
+    override fun getData(): String {
         val random: List<Int> = List(1) { Random.nextInt(0, 2) }
         val generated = random[0]
 
